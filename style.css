@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: sans-serif;
 }
 
 a {
@@ -64,11 +65,30 @@ ul {
 }
 
 .header__title {
-    font-size: 60px;
+    /* font-size: 150px; */
+    /* font-size: 72px; */
+    /* font-size: calc(50px + 100 * (100vw / 1920)); */
+    font-size: calc(50px + 22 * (100vw / 1920));
+    /* font-size: 10vw; */
+}
+
+.original {
+    /* font-size: 150px; */
+    font-size: 72px;
 }
 
 .header__txt {
     font-size: 22px;
+}
+
+@media (max-width: 767px) {
+    .original {
+        font-size: 50px;
+    }
+    
+    .header__title {
+        font-size: calc(50px + (22 + 22 * 0.7) * (100vw - 320px) / 1920);
+    }
 }
 
 /* header end */
